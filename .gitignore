@@ -18,8 +18,10 @@ lib/
 lib64/
 parts/
 sdist/
+datasets
 var/
 wheels/
+ckpt/
 *.egg-info/
 .installed.cfg
 *.egg
