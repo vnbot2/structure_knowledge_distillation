@@ -1,8 +1,12 @@
+conda activate skd
+
 is_pi_use=True
 is_pa_use=True
 is_ho_use=True
 lambda_pi=10.0
 lambda_d=0.1
+
+
 
 # start kd from 0 step with loading the pretrain imgnet model on student 
 CUDA_VISIBLE_DEVICES=0 python train_and_eval.py \
@@ -11,8 +15,8 @@ CUDA_VISIBLE_DEVICES=0 python train_and_eval.py \
 	--random-mirror \
 	--random-scale \
 	--weight-decay 5e-4 \
-	--data-dir '../datasets/coco' \
-	--batch-size 2 \
+	--data-dir 'datasets/cityspaces' \
+	--batch-size 8 \
 	--num-steps 40000 \
 	--is-student-load-imgnet True \
 	--student-pretrain-model-imgnet ./ckpt/resnet18-imagenet.pth \

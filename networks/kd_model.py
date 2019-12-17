@@ -177,7 +177,8 @@ class NetModel():
                 gpu_id = gpu_id, 
                 input_size = input_size, 
                 num_classes = num_classes,
-                whole = whole)
+                whole = whole
+        )
         return mean_IU, IU_array 
 
     def print_info(self, epoch, step):
